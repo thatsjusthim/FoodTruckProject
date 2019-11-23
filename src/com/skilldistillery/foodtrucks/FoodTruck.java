@@ -19,7 +19,17 @@ public class FoodTruck {
 	//private static int nextfoodtruckId, this one wants to be started with the value 1,
 	//once the value of 1 is changed its changed for all following nextfoodtruckIds.
 	
+	//C o n s t r u c t o r s
 	
+	public FoodTruck(String name, String typeOfFood, double rating) {
+		super();
+		this.name = name;
+		this.typeOfFood = typeOfFood;
+		this.rating = rating;
+	}
+	public FoodTruck() {
+		
+	}
 	
 
 	@Override
@@ -27,6 +37,7 @@ public class FoodTruck {
 		return "FoodTruck name=" + name + ", typeOfFood=" + typeOfFood + ", numericId=" + numericId + ", rating="
 				+ rating;
 	}
+
 
 	public String getName() {
 		return name;

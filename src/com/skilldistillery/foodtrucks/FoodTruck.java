@@ -7,6 +7,7 @@ public class FoodTruck {
 	private String typeOfFood;
 	private int numericId;
 	private double rating;
+	private static int nextId = 1; 	//Having only one static method does not mean you can't use static fields
 	
 	//M e t h o d s
 	//get data, call constructor, store an array. The data is (create variables, receive data for variables, 
@@ -18,6 +19,7 @@ public class FoodTruck {
 	//toString takes the data from the food truck and turns it into string representation;
 	//private static int nextfoodtruckId, this one wants to be started with the value 1,
 	//once the value of 1 is changed its changed for all following nextfoodtruckIds.
+
 	
 	//C o n s t r u c t o r s
 	
@@ -26,9 +28,13 @@ public class FoodTruck {
 		this.name = name;
 		this.typeOfFood = typeOfFood;
 		this.rating = rating;
+		this.numericId = nextId;
+		nextId++;
 	}
+	
 	public FoodTruck() {
-		
+		this.numericId = nextId;
+		nextId++;
 	}
 	
 
@@ -37,6 +43,7 @@ public class FoodTruck {
 		return "FoodTruck name=" + name + ", typeOfFood=" + typeOfFood + ", numericId=" + numericId + ", rating="
 				+ rating;
 	}
+	
 
 
 	public String getName() {
@@ -70,6 +77,5 @@ public class FoodTruck {
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
-	
 	
 }

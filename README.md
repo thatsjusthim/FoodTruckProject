@@ -25,3 +25,6 @@ data types themselves. Obvious but not understood at first.
 
 Using toString() to bring information in. Trying to figure out where it gets
 the information and how to put it into the array.
+
+Using loops in order to run through arrays is useful. You can use " == null" to
+get past not being able to search individually through the array.

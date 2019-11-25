@@ -6,8 +6,8 @@ public class FoodTruck {
 	private String name;
 	private String typeOfFood;
 	private int numericId;
-	private double rating;
-	private static int nextId = 1; 	//Having only one static method does not mean you can't use static fields
+	private int rating;
+	static int nextId = 1; 	//Having only one static method does not mean you can't use static fields
 	FoodTruck[] foodTrucks = new FoodTruck[5];
 	
 	//M e t h o d s
@@ -24,8 +24,7 @@ public class FoodTruck {
 	
 	//C o n s t r u c t o r s
 	
-	public FoodTruck(String name, String typeOfFood, double rating) {
-		super();
+	public FoodTruck(String name, String typeOfFood, int rating) {
 		this.name = name;
 		this.typeOfFood = typeOfFood;
 		this.rating = rating;
@@ -71,11 +70,11 @@ public class FoodTruck {
 		this.numericId = numericId;
 	}
 
-	public double getRating() {
+	public int getRating() {
 		return rating;
 	}
 
-	public void setRating(double rating) {
+	public void setRating(int rating) {
 		this.rating = rating;
 	}
 }
